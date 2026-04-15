@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Femi's Film Poster Archive</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f7f4ee;
+      color: #222;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    h1 {
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 18px;
+      max-width: 700px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+    }
+    .card .text {
+      padding: 16px;
+    }
+    .card h2 {
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+    .card p {
+      font-size: 14px;
+      margin: 0;
+      color: #666;
+    }
+    footer {
+      margin-top: 72px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Femi's Film Poster Archive</h1>
+    <p>
+      A personal archive of film posters across countries and years,
+      tracing how cinema is reimagined through visual design.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x600?text=Poster+1" alt="In the Mood for Love poster">
+        <div class="text">
+          <h2>In the Mood for Love</h2>
+          <p>Hong Kong / France / International editions</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x600?text=Poster+2" alt="Poster example">
+        <div class="text">
+          <h2>Coming Soon</h2>
+          <p>More poster studies will be added here.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Built as a personal film poster study archive.
+    </footer>
+  </div>
+</body>
+</html>
