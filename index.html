@@ -4,180 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>一本</title>
-
   <style>
     body {
       margin: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
       background: #f7f4ee;
       color: #222;
-      line-height: 1.7;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ===== 封面 ===== */
     .cover {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 32px;
       text-align: center;
+      box-sizing: border-box;
     }
 
     .cover img {
       width: 280px;
+      max-width: 78vw;
       border-radius: 10px;
       margin-bottom: 32px;
+      display: block;
     }
 
-    .cover h1 {
+    h1 {
       font-size: 48px;
       font-weight: 500;
-      margin-bottom: 16px;
+      margin: 0 0 16px;
     }
 
-    .cover p {
+    .intro {
       max-width: 520px;
       font-size: 17px;
+      line-height: 1.9;
       color: #555;
-      margin-bottom: 40px;
+      margin: 0 0 40px;
     }
 
     .enter {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #cfc7bb;
+      border-radius: 999px;
+      color: #444;
+      text-decoration: none;
       font-size: 14px;
-      color: #888;
-      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgba(255,255,255,0.5);
     }
 
     .enter:hover {
+      background: #ffffff;
       color: #222;
-    }
-
-    /* ===== 目录 ===== */
-    .section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      font-size: 24px;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    .section-desc {
-      color: #666;
-      margin-bottom: 40px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    }
-
-    .card img {
-      width: 100%;
-      aspect-ratio: 2 / 3;
-      object-fit: cover;
-    }
-
-    .text {
-      padding: 18px;
-    }
-
-    .text h2 {
-      margin: 0 0 8px;
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    .text p {
-      margin: 0;
-      font-size: 14px;
-      color: #666;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    footer {
-      text-align: center;
-      padding: 60px 0 40px;
-      font-size: 14px;
-      color: #777;
     }
   </style>
 </head>
-
 <body>
-
-  <!-- ===== 封面 ===== -->
   <section class="cover">
     <img src="images/香港发行版本2000.jpg" alt="封面海报">
-
     <h1>一本</h1>
-
-    <p>
+    <p class="intro">
       这是一个关于电影海报的个人记录。<br>
       我在这里慢慢收集，一部电影在不同地方，被重新想象的样子。
     </p>
-
-    <div class="enter" onclick="document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });">
-      ↓ 进入目录
-    </div>
+    <a class="enter" href="catalog.html">进入</a>
   </section>
-
-
-  <!-- ===== 目录 ===== -->
-  <div class="container">
-    <section id="catalog" class="section">
-      <h2 class="section-title">目录</h2>
-      <p class="section-desc">
-        从一部电影开始，慢慢展开。
-      </p>
-
-      <div class="grid">
-
-        <a href="in-the-mood-for-love.html">
-          <div class="card">
-            <img src="images/香港发行版本2000.jpg" alt="花样年华海报">
-            <div class="text">
-              <h2>第一章｜花样年华</h2>
-              <p>同一部电影，在不同地方的视觉差异</p>
-            </div>
-          </div>
-        </a>
-
-        <div class="card">
-          <img src="images/香港2.jpg" alt="coming soon">
-          <div class="text">
-            <h2>第二章｜未完成</h2>
-            <p>下一部电影，还在等待。</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <footer>
-      Built as a personal film poster archive.
-    </footer>
-  </div>
-
 </body>
 </html>
