@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>一个电影的海报</title>
+  <title>一本</title>
+
   <style>
     body {
       margin: 0;
@@ -12,126 +13,171 @@
       color: #222;
       line-height: 1.7;
     }
+
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 40px 24px 80px;
+      padding: 0 24px;
     }
+
+    /* ===== 封面 ===== */
     .cover {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-bottom: 80px;
     }
+
     .cover img {
       width: 280px;
-      max-width: 100%;
       border-radius: 10px;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
+
     .cover h1 {
-      font-size: 42px;
+      font-size: 48px;
       font-weight: 500;
-      margin: 0 0 12px;
+      margin-bottom: 16px;
     }
+
     .cover p {
-      max-width: 640px;
-      margin: 0 auto;
-      color: #666;
+      max-width: 520px;
       font-size: 17px;
+      color: #555;
+      margin-bottom: 40px;
     }
+
+    .enter {
+      font-size: 14px;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .enter:hover {
+      color: #222;
+    }
+
+    /* ===== 目录 ===== */
+    .section {
+      padding: 80px 0;
+    }
+
     .section-title {
       font-size: 24px;
-      margin: 0 0 24px;
       font-weight: 500;
+      margin-bottom: 12px;
     }
+
+    .section-desc {
+      color: #666;
+      margin-bottom: 40px;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 24px;
-      margin-bottom: 72px;
     }
+
     .card {
       background: white;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
+
     .card img {
       width: 100%;
       aspect-ratio: 2 / 3;
       object-fit: cover;
-      display: block;
     }
+
     .text {
       padding: 18px;
     }
+
     .text h2 {
       margin: 0 0 8px;
       font-size: 18px;
       font-weight: 500;
     }
+
     .text p {
       margin: 0;
+      font-size: 14px;
       color: #666;
-      font-size: 14px;
     }
+
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
+
     footer {
-      margin-top: 40px;
       text-align: center;
-      color: #777;
+      padding: 60px 0 40px;
       font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
+
 <body>
+
+  <!-- ===== 封面 ===== -->
+  <section class="cover">
+    <img src="images/香港发行版本2000.jpg" alt="封面海报">
+
+    <h1>一本</h1>
+
+    <p>
+      这是一个关于电影海报的个人记录。<br>
+      我在这里慢慢收集，一部电影在不同地方，被重新想象的样子。
+    </p>
+
+    <div class="enter" onclick="document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });">
+      ↓ 进入目录
+    </div>
+  </section>
+
+
+  <!-- ===== 目录 ===== -->
   <div class="container">
-
-    <section class="cover">
-      <img src="images/香港发行版本2000.jpg" alt="封面海报">
-      <h1>一个电影的海报</h1>
-      <p>
-        一本关于电影海报的电子杂志。这里记录同一部电影在不同国家与年份中，
-        如何被重新设计、重新命名、重新观看。
+    <section id="catalog" class="section">
+      <h2 class="section-title">目录</h2>
+      <p class="section-desc">
+        从一部电影开始，慢慢展开。
       </p>
-    </section>
 
-    <section>
-      <h2 class="section-title">章节</h2>
       <div class="grid">
+
         <a href="in-the-mood-for-love.html">
           <div class="card">
-            <img src="images/香港发行版本2000.jpg" alt="In the Mood for Love poster">
+            <img src="images/香港发行版本2000.jpg" alt="花样年华海报">
             <div class="text">
               <h2>第一章｜花样年华</h2>
-              <p>香港 / 法国 / 国际版海报的视觉差异</p>
+              <p>同一部电影，在不同地方的视觉差异</p>
             </div>
           </div>
         </a>
 
         <div class="card">
-          <img src="images/香港2.jpg" alt="Poster example">
+          <img src="images/香港2.jpg" alt="coming soon">
           <div class="text">
-            <h2>第二章｜即将上线</h2>
-            <p>下一部电影，下一组国家版本。</p>
+            <h2>第二章｜未完成</h2>
+            <p>下一部电影，还在等待。</p>
           </div>
         </div>
+
       </div>
     </section>
 
-    <section>
-      <h2 class="section-title">关于这本电子杂志</h2>
-      <p>
-        这不是一份完整的电影数据库，而是一种个人化的电影视觉阅读。
-        我更关心一部电影在跨越语言与市场时，海报如何改变它的气质。
-      </p>
-    </section>
-
     <footer>
-      Built as a personal film poster magazine.
+      Built as a personal film poster archive.
     </footer>
   </div>
+
 </body>
 </html>
