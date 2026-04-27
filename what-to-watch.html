@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>这周看什么｜一本</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f7f4ee;
+      color: #222;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 36px;
+      color: #777;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      color: #222;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 500;
+      margin: 0 0 12px;
+    }
+
+    .intro {
+      max-width: 680px;
+      color: #666;
+      margin-bottom: 56px;
+    }
+
+    .film {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      padding: 32px 0;
+      border-top: 1px solid #ddd3c6;
+    }
+
+    .film img {
+      width: 180px;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #e8dfd2;
+    }
+
+    .film h2 {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0 0 8px;
+    }
+
+    .meta {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .note {
+      margin-bottom: 16px;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 14px;
+      color: #444;
+      font-size: 14px;
+      text-decoration: none;
+      border-bottom: 1px solid #aaa;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 9px;
+      border: 1px solid #cfc7bb;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #666;
+      margin-right: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 64px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 680px) {
+      .film {
+        grid-template-columns: 1fr;
+      }
+
+      .film img {
+        width: 100%;
+        max-width: 260px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a class="back" href="catalog.html">← 返回目录</a>
+
+    <h1>这周看什么</h1>
+
+    <p class="intro">
+      一个很小的电影导览页。这里记录近期上映、将映或重映的电影，
+      附上预告片、观众评价入口，以及一点点个人观看理由。
+    </p>
+
+    <section class="film">
+      <img src="images/once-a-thief.jpg" alt="纵横四海海报">
+      <div>
+        <span class="tag">重映</span>
+        <span class="tag">中国大陆</span>
+        <h2>纵横四海</h2>
+        <p class="meta">1991 / 吴宇森 / 2026年5月3日中国大陆重映</p>
+        <p class="note">
+          适合想看港片黄金年代的人。它的吸引力不只在动作，也在周润发、张国荣、钟楚红三个人之间那种轻盈又带伤感的关系。
+        </p>
+        <p class="links">
+          <a href="https://www.youtube.com/results?search_query=Once+A+Thief+1991+trailer" target="_blank">预告片</a>
+          <a href="https://movie.douban.com/subject_search?search_text=纵横四海" target="_blank">豆瓣评价</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="film">
+      <img src="images/the-devil-wears-prada-2.jpg" alt="穿普拉达的女王2海报">
+      <div>
+        <span class="tag">将映</span>
+        <span class="tag">中国大陆</span>
+        <h2>穿普拉达的女王2</h2>
+        <p class="meta">2026 / 美国 / 2026年4月30日中国大陆上映</p>
+        <p class="note">
+          如果你喜欢时尚行业、职场女性叙事和商业片里的都市质感，可以放进关注清单。适合做“续集如何重启经典IP”的观察。
+        </p>
+        <p class="links">
+          <a href="https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+2+trailer" target="_blank">预告片</a>
+          <a href="https://movie.douban.com/subject_search?search_text=穿普拉达的女王2" target="_blank">豆瓣评价</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="film">
+      <img src="images/cold-war-1994.jpg" alt="寒战1994海报">
+      <div>
+        <span class="tag">将映</span>
+        <span class="tag">中国大陆</span>
+        <h2>寒战1994</h2>
+        <p class="meta">2026 / 中国香港、中国大陆 / 2026年5月1日中国大陆上映</p>
+        <p class="note">
+          可以作为港式警匪片、制度叙事和类型片更新的观察对象。如果之后有正式海报，也很适合加入你的海报研究。
+        </p>
+        <p class="links">
+          <a href="https://www.youtube.com/results?search_query=寒战1994+预告片" target="_blank">预告片</a>
+          <a href="https://movie.douban.com/subject_search?search_text=寒战1994" target="_blank">豆瓣评价</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      Updated manually. A small weekly film note.
+    </footer>
+  </div>
+</body>
+</html>
