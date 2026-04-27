@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>目录｜一本</title>
+
   <style>
     body {
       margin: 0;
@@ -19,13 +20,9 @@
       padding: 64px 24px 80px;
     }
 
-    .topline {
-      margin-bottom: 48px;
-    }
-
     .back {
       display: inline-block;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       color: #777;
       text-decoration: none;
       font-size: 14px;
@@ -42,23 +39,45 @@
     }
 
     .desc {
+      max-width: 660px;
+      color: #666;
+      margin: 0 0 64px;
+    }
+
+    .module {
+      margin-bottom: 72px;
+    }
+
+    .module-title {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0 0 10px;
+    }
+
+    .module-desc {
       max-width: 620px;
       color: #666;
-      margin: 0;
+      margin: 0 0 28px;
+      font-size: 15px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
-      margin-top: 40px;
     }
 
     .card {
-      background: white;
+      background: #fff;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
     }
 
     .card img {
@@ -66,6 +85,10 @@
       aspect-ratio: 2 / 3;
       object-fit: cover;
       display: block;
+    }
+
+    .wide-card img {
+      aspect-ratio: 16 / 9;
     }
 
     .text {
@@ -91,54 +114,67 @@
 
     footer {
       text-align: center;
-      padding-top: 64px;
+      padding-top: 24px;
       font-size: 14px;
       color: #777;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <div class="topline">
-      <a class="back" href="index.html">← 返回封面</a>
-      <h1>目录</h1>
-      <p class="desc">
-        从一部电影开始，慢慢展开。这里记录同一部电影在不同国家与年份中的海报版本，以及它们如何改变一部电影的气质。
+
+    <a class="back" href="index.html">← 返回封面</a>
+
+    <h1>目录</h1>
+
+    <p class="desc">
+      这里不是一份完整的电影数据库，而是一份慢慢生长的个人电影记录。
+      一部分关于海报如何改变电影的气质，一部分关于最近可以看什么。
+    </p>
+
+    <section class="module">
+      <h2 class="module-title">电影海报档案</h2>
+      <p class="module-desc">
+        收集同一部电影在不同国家、年份与发行语境中的海报版本。
       </p>
-    </div>
 
-    <div class="grid">
-      <a href="in-the-mood-for-love.html">
-        <div class="card">
-          <img src="images/香港发行版本2000.jpg" alt="花样年华海报">
-          <div class="text">
-            <h2>第一章｜花样年华</h2>
-            <p>同一部电影，在不同地方的视觉差异</p>
+      <div class="grid">
+        <a href="in-the-mood-for-love.html">
+          <div class="card">
+            <img src="images/香港发行版本2000.jpg" alt="花样年华海报">
+            <div class="text">
+              <h2>花样年华</h2>
+              <p>香港 / 法国 / 国际版本的视觉差异</p>
+            </div>
           </div>
-        </div>
-      </a>
-
-      <div class="card">
-        <img src="images/香港2.jpg" alt="coming soon">
-        <div class="text">
-          <h2>第二章｜未完成</h2>
-          <p>下一部电影，还在等待。</p>
-        </div>
+        </a>
       </div>
-    </div>
+    </section>
+
+    <section class="module">
+      <h2 class="module-title">这周看什么</h2>
+      <p class="module-desc">
+        近期上映、将映或重映电影的小型导览，附预告片、评价入口与简单观看理由。
+      </p>
+
+      <div class="grid">
+        <a href="what-to-watch.html">
+          <div class="card wide-card">
+            <img src="images/香港2.jpg" alt="这周看什么">
+            <div class="text">
+              <h2>本周影讯</h2>
+              <p>近期电影、重映片与值得留意的新片</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
 
     <footer>
       Built as a personal film poster archive.
     </footer>
+
   </div>
 </body>
 </html>
-<a href="what-to-watch.html">
-  <div class="card">
-    <img src="images/香港2.jpg">
-    <div class="text">
-      <h2>这周看什么</h2>
-      <p>近期上映、将映与重映电影导览</p>
-    </div>
-  </div>
-</a>
